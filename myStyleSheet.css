@@ -1,0 +1,294 @@
+:root{
+
+    --primary-blue-profile: hsl(246, 80%, 60%);
+    --primary-light-red-work: hsl(15, 100%, 70%);
+    --primary-soft-blue-play: hsl(195, 74%, 62%);
+    --primary-light-red-study: hsl(348, 100%, 68%);
+    --primary-lime-green-exercise: hsl(145, 58%, 55%);
+    --primary-violet-social: hsl(264, 64%, 52%);
+    --primary-soft-orange-selfCare: hsl(43, 84%, 65%);
+    
+    
+    
+    --neutral-Very-dark-blue: hsl(226, 43%, 10%);
+    --neutral-Dark-blue: hsl(235, 46%, 20%);
+    --neutral-Desaturated-blue: hsl(235, 45%, 61%);
+    --neutral-Pale-Blue: hsl(236, 100%, 87%);
+    
+    --fs-small: .9375rem;
+    --fs-medium: 1.125rem;
+    --fs-large: 1.5rem;
+
+    --fw-regular: 300;
+    --fw-semi-bold: 400;
+    --fw-bold:500;
+    
+    --fc-100: hsl(249, 100%, 96%);
+    --fc-200: hsl(243, 21%, 83%);
+
+    --border-radius: 1.3rem;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    /* background: var(--neutral-Very-dark-blue); */
+
+    color: var(--fc-100);
+    font-family: 'Rubik', sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    padding: 5rem 1.5rem;
+
+    max-width: 72.3125rem;
+}
+
+@media screen and (min-width:768px){
+    .container{
+        display:grid;
+        gap: 1rem;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/*////////////////// CARD PROFILE */
+
+.card-profile{
+    background: var(--neutral-Dark-blue);
+
+    border-radius: var(--border-radius);
+
+    overflow: hidden;
+
+    max-width: 20.625rem;
+}
+
+.top-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 2rem;
+
+    background: var(--primary-blue-profile);
+
+    border-radius: var(--border-radius);
+}
+
+
+.profile-image{
+    width: 4rem;
+    border-radius: 100%;
+    border: .2rem solid var(--fc-100);
+    
+    margin: 0 auto;
+    
+}
+
+.profile-info{
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-left: 1rem;
+}
+
+.profile-title{
+    font-size: var(--fs-small);
+    font-weight: var(--fw-regular);
+    color: var(--fc-200);
+
+    flex-basis: 100%;
+}
+
+:is(.profile-name, .profile-last-name){
+    font-size: var(--fs-large);
+}
+
+.profile-last-name{
+    margin-left: .5rem;
+}
+
+.btn{
+    outline: none;
+    border: none;
+    background:none;
+
+    font-size: var(--fs-medium);
+    color: var(--neutral-Pale-Blue);
+    opacity: .75;
+
+    padding: 1.75rem;
+
+    cursor: pointer;
+}
+
+.bottom-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.active{
+    color: var(--fc-100);
+    opacity: 1;
+}
+
+@media screen and (min-width:768px){
+    .card-profile{
+        grid-row: span 2;
+
+        max-width: 15.9375rem;
+    }
+
+    .top-section{
+        flex-direction: column;
+        align-items: start;
+        padding-bottom: 3.125rem;
+    }
+
+    .profile-info{
+        margin: 0;
+    }
+
+    .profile-image{
+        margin: 0 0 2.5625rem;
+    }
+    
+    .profile-last-name{
+        margin: 0;
+        flex-basis: 100%;
+    }
+
+    .bottom-section{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .btn{
+        padding: .5rem;
+    }
+}
+
+/*////////////////// ALL CARDS */
+
+.cards{
+    max-width: 20.625rem;
+
+    color: var(--fc-100);
+
+    margin-top: 1.25rem;
+
+    overflow: hidden;
+    border-radius: var(--border-radius);
+}
+
+.top-ribbon{
+    height: 2.1875rem;
+    overflow: hidden;
+}
+
+.card-bottom-section{
+    background: var(--neutral-Dark-blue);
+
+    border-radius: var(--border-radius);
+
+    padding: 1rem;
+}
+
+.card-title{
+    font-size: var(--fs-medium);
+}
+
+.img-elipsis{
+    color: white;
+}
+
+.card-hours{
+    font-weight: var(--fw-semi-bold);
+}
+
+.previous-hours{
+    color: var(--neutral-Pale-Blue);
+}
+
+:is(.card-info-top, .card-info-bottom)
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.card-image{
+    display: flex;
+    width: 4rem;
+    margin: -.5rem 1rem 0 auto;
+
+    opacity: .3;
+}
+
+@media screen and (min-width:768px){
+    .cards{
+        max-width: 15.9375rem;
+    }
+    .card-info-bottom{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .card-hours{
+        margin-bottom: 1rem;
+    }
+    .previous-hours{
+        font-size: var(--fs-small);
+    }
+}
+
+/*////////////////// WORK CARD */
+
+.card-work{
+    background: var(--primary-light-red-work);
+}
+
+
+/*////////////////// PLAY CARD */
+
+.card-play{
+    background: var(--primary-soft-blue-play);
+}
+
+/*////////////////// STUDY CARD */
+
+.card-study{
+    background: var(--primary-light-red-study);
+}
+
+/*////////////////// EXERCISE CARD */
+
+.card-exercise{
+    background: var(--primary-lime-green-exercise);
+}
+
+/*////////////////// SOCIAL CARD */
+
+.card-social{
+    background: var(--primary-violet-social);
+}
+
+/*////////////////// SELF-CARE CARD */
+
+.card-selfCare{
+    background: var(--primary-soft-orange-selfCare);
+}
