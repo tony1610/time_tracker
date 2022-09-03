@@ -39,7 +39,7 @@
 }
 
 body{
-    /* background: var(--neutral-Very-dark-blue); */
+    background: var(--neutral-Very-dark-blue);
 
     color: var(--fc-100);
     font-family: 'Rubik', sans-serif;
@@ -180,6 +180,11 @@ body{
     .btn{
         padding: .5rem;
     }
+   
+    .btn:hover{
+        color: var(--fc-100);
+        cursor: pointer;
+    }
 }
 
 /*////////////////// ALL CARDS */
@@ -208,12 +213,17 @@ body{
     padding: 1rem;
 }
 
+.card-bottom-section:hover{
+    opacity: .7;
+    cursor: pointer;
+}
+
 .card-title{
     font-size: var(--fs-medium);
 }
 
-.img-elipsis{
-    color: white;
+.img-elipsis:hover{
+    cursor: pointer;
 }
 
 .card-hours{
